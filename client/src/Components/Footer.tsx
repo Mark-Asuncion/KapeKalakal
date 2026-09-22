@@ -63,6 +63,8 @@ export default function Footer() {
     </div>
     <p className="italic text-xs fraunces-regular">
         <b>Please note:</b> This website uses a free database service. Some features or pages may display empty results or static results because the free database service has expired.
+        <br />
+        Some features are also disabled like reviews, checkout, and admin page
     </p>
     <p className="italic text-xs fraunces-regular">
         &copy; 2025 Kape Kalakal. All Rights Reserved.

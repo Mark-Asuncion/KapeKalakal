@@ -22,7 +22,6 @@ export function ButtonCart({ product, ...props }: ButtonCartProps) {
   const cartItem = cart?.products.filter((item) => {
     return item.product?.id == product.id;
   })[0];
-    console.debug(cartItem);
   return <Btn className={`w-full ${props.className}`}
     cartAmount={cartItem?.amount}
     disabled={product.stocks==0}

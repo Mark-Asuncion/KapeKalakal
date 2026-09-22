@@ -11,7 +11,6 @@ export default function useCart() {
 
   const addToCart = async (product: Product, amount: number): Promise<Cart> => {
     const index = window.CART.findIndex((v) => v.status == "cart");
-    console.debug(product, amount);
     if (index <= -1) {
         const cart = new Cart({
             id: crypto.randomUUID(),

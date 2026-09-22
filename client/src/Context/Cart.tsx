@@ -47,7 +47,6 @@ export function CartContextProvider({ children, withProductInfo = false, waitFor
           notify("error", e.message)
         }
         else {
-          console.debug(e)
           notify("error", "Error occured");
         }
       }

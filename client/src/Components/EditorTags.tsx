@@ -24,7 +24,6 @@ export function EditorTags(props: EditorTagsProps) {
       if (inp.value.length == 0 || !inp.value) {
         return;
       }
-      // console.debug("add", inp.value);
       setTags(v => {
          const found = v.find((vname) => inp.value == vname);
          if (found) {
