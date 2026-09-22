@@ -4,7 +4,7 @@ import A from "./A";
 const Link = A;
 
 export default function Footer() {
-  return <div className="bg-primary-900 p-1 text-white">
+  return <footer className="bg-primary-900 p-1 text-white mt-auto">
     <div className="px-2 py-2 tracking-wide fraunces-regular text-md flex flex-col items-center gap-12 sm:flex-row mb-4">
       <div className="w-max m-auto md:m-[initial] md:w-[initial]">
         <div className="flex gap-2 items-center justify-center md:justify-normal mb-4">
@@ -61,16 +61,11 @@ export default function Footer() {
       </div>
 
     </div>
-    <p className="italic text-xs fraunces-regular">&copy; 2025 Kape Kalakal. All Rights Reserved.</p>
-  </div>
+    <p className="italic text-xs fraunces-regular">
+        <b>Please note:</b> This website uses a free database service. Some features or pages may display empty results or static results because the free database service has expired.
+    </p>
+    <p className="italic text-xs fraunces-regular">
+        &copy; 2025 Kape Kalakal. All Rights Reserved.
+    </p>
+  </footer>
 }
-
-/*
-Bayanihan: We work hand-in-hand with communities and value collaboration over competition.
-
-Transparency: We ensure fair pricing and ethical sourcing.
-
-Cultural Pride: We celebrate Filipino heritage and support indigenous and local artisans.
-
-Sustainability: We promote eco-friendly packaging and slow commerce.
-*/

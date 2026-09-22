@@ -13,6 +13,7 @@ import A from "../Components/A";
 import Button from "../Components/Button";
 import { useNavigate } from "react-router";
 import Avatar from "../Components/Avatar";
+import NotFound from "./404";
 
 export default function Admin() {
   return <EditableDataContextProvider>
@@ -40,6 +41,9 @@ function Page() {
         setIsLoading(false);
   }, [tableData, actionType])
 
+  if (user == null) {
+    return <NotFound />
+  }
   return <>
     {/* <div className="h-[var(--appbar-height)]"></div> */}
     <div className="block md:flex">

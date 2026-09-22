@@ -23,7 +23,7 @@ export default function PromoList(props: PromoListProps) {
      className={`w-full bg-primary-200 border-primary-300 text-primary-600 *:fill-primary-600 border-1 p-8 text-xl text-center animate-appear flex flex-col gap-4 items-center justify-center fraunces-regular font-medium ${Theme.rounded}`}>
       <div>
         <div className="flex gap-2 mt-2 justify-center text-sm">
-          <p>No Promos</p>
+          <p>No Promos right now</p>
         </div>
       </div>
     </div>

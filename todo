@@ -1,3 +1,0 @@
-# Backend
-- [x] Generic Delete, Update, Add handler
-- [ ] Cascade delete for products on carts

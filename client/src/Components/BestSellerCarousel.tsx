@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router';
 export default function BestSeller({ products, isLoaded = false }: { products: Product[], isLoaded?: boolean }) {
   const responsive = CarouselBreakpoints;
 
-  if (isLoaded && products && products.length == 0) {
+  if (isLoaded && products.length == 0) {
     return <div
      className={`w-full bg-primary-200 border-primary-300 text-primary-600 *:fill-primary-600 border-1 p-8 text-xl text-center animate-appear flex flex-col gap-4 items-center justify-center fraunces-regular font-medium ${Theme.rounded}`}>
       <div>

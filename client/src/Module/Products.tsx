@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export function Products() {
   return <>
     {/* <div className="mt-[var(--appbar-height)] py-[66px] min-h-full w-full md:w-[90%] md:mx-auto"></div> */}
-    <div className="mt-[var(--appbar-height)] py-8 px-2 w-full">
+    <div className="mt-[var(--appbar-height)] py-8 px-2 w-full flex flex-col min-h-full">
        <div className="flex gap-1">
         <div className="w-[25svw]">
             <ProductFilter />
