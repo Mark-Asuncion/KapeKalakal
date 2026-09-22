@@ -1,3 +1,4 @@
+import type Cart from "../Models/Cart";
 import { Product } from "../Models/Product";
 import User, { UserShipping } from "../Models/User";
 
@@ -5,6 +6,8 @@ declare global {
   interface Window {
     USERS: User[];
     PRODUCTS: Product[];
+    LOGGED_IN_USER: User | null
+    CART: Cart[]
   }
 }
 
@@ -49,6 +52,9 @@ export default function init() {
         })
     ];
 
+    // window.LOGGED_IN_USER = null;
+    window.LOGGED_IN_USER = window.USERS[0];
+    window.CART = window.CART || [];
     window.PRODUCTS = window.PRODUCTS || [
         new Product({
             _id: "1a2b3c4d-1111-4444-8888-123456789001",

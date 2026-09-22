@@ -37,11 +37,11 @@ export default function MProductItem() {
   const [ loading, setLoading ] = useState(true);
 
   const loadReviews = async (product: Product) => {
-    const reviews = await getReviewsOf(product);
-    setReview({
-      reviews: reviews,
-      summary: Review.createSummary(reviews)
-    });
+    // const reviews = await getReviewsOf(product);
+    // setReview({
+    //   reviews: reviews,
+    //   summary: Review.createSummary(reviews)
+    // });
   };
 
   useEffect(() => {

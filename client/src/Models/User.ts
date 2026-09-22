@@ -43,7 +43,8 @@ export default class User {
   updatedAt: Date | null;
 
   constructor(obj: any) {
-    this.id = obj._id;
+    // this.id = obj._id;
+    this.id = obj.id;
     this.username = obj.username;
     this.email = obj.email;
     this.role = obj.role;

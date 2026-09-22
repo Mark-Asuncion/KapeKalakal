@@ -36,7 +36,10 @@ function filterProducts(
 
     if (
       query.tags.length > 0 &&
-      !query.tags.every(tag => product.tags.includes(tag))
+      query.tags.filter(
+            tag => product.tags
+            .findIndex(tt => tt.toLowerCase() == tag.toLowerCase()) >= 0
+        ).length == 0
     ) {
       return false;
     }

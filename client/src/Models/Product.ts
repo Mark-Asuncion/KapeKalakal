@@ -14,7 +14,7 @@ export class Product {
   updatedAt: Date | null;
 
   constructor(obj: any) {
-    this.id = obj._id;
+    this.id = obj._id || obj.id;
     this.name = obj.name;
     this.description = obj.description;
     this.price = Number(obj.price)

@@ -32,7 +32,7 @@ export function ProductItem({ product, ...props}: ProductItemProps) {
         });
       }
       catch (e) {
-        console.log("ProductItem::ERR", e);
+        // console.log("ProductItem::ERR", e);
       }
     }
     a();

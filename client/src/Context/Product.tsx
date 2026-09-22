@@ -47,7 +47,7 @@ export function ProductContextProvider({ children }: { children: ReactNode }) {
         setProduct(products);
       }
       catch (e) {
-        console.log("ProductProvider::ERR", e);
+        // console.log("ProductProvider::ERR", e);
       }
       setLoading(false);
     }
@@ -61,7 +61,7 @@ export function ProductContextProvider({ children }: { children: ReactNode }) {
         filterPreset.current = preset;
       }
       catch (e) {
-        console.log("ERR", e);
+        // console.log("ERR", e);
       }
     }
     a();

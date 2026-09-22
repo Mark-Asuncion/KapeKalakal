@@ -63,15 +63,16 @@ export default function useUsers() {
   };
 
   const getShippingInfo = async () => {
-    const res = await fetch(`${api}/shipping-info`, {
-      credentials: "include",
-    });
-
-    const resjson = await res.json();
-    if (res.status >= 200 && res.status <= 399) {
-      return new UserShipping(resjson);
-    }
-    throw new MError(resjson);
+    return window.LOGGED_IN_USER?.shipping;
+    // const res = await fetch(`${api}/shipping-info`, {
+    //   credentials: "include",
+    // });
+    //
+    // const resjson = await res.json();
+    // if (res.status >= 200 && res.status <= 399) {
+    //   return new UserShipping(resjson);
+    // }
+    // throw new MError(resjson);
   }
 
   const updateShippingInfo = async (shippingInfo: UserShipping) => {

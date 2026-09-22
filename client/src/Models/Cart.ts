@@ -17,7 +17,7 @@ export default class Cart {
   updatedAt: Date | null;
 
   constructor(obj: any) {
-    this.id = obj._id;
+    this.id = obj._id || obj.id;
     this.owner = obj.owner;
     this.products = obj.products as CartItem[] || [];
     if (this.products.length > 0 && typeof this.products[0].product == "object") {

@@ -20,9 +20,9 @@ export function ButtonCart({ product, ...props }: ButtonCartProps) {
   const { addToCart } = useCart();
   // console.log(cart?.products, product);
   const cartItem = cart?.products.filter((item) => {
-    return item.id == product.id;
+    return item.product?.id == product.id;
   })[0];
-
+    console.debug(cartItem);
   return <Btn className={`w-full ${props.className}`}
     cartAmount={cartItem?.amount}
     disabled={product.stocks==0}
@@ -31,6 +31,7 @@ export function ButtonCart({ product, ...props }: ButtonCartProps) {
         notify("error", "Please login first before adding to cart.");
         return;
       }
+ 
       addToCart(product, newAmount).catch(e => notify("error", (e as MError).toErrorList().join('\n')));
     }}
     onClick={(e) => {
