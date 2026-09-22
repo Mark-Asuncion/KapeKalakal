@@ -1,4 +1,4 @@
-# Kape Kalakal
+# Kape Kalakal ([Demo](https://kapekalakal-t8wx.onrender.com))
 An e-commerce website for an online coffee shop, designed to showcase a complete shopping experience including product browsing, filtering, product details, and a shopping cart.
 
 # Tech stack
