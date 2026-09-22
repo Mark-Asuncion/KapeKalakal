@@ -5,6 +5,9 @@ import { RouterProvider } from "react-router";
 import { ROUTER } from './Utils/Routes';
 import { UserContextProvider } from './Context/User';
 import NotifyProvider from './Context/Notify';
+import init from './Utils/MockData'
+
+init();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

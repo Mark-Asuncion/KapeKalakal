@@ -38,6 +38,7 @@ export default function Login() {
     <Navbar className="bg-primary-950" />
     <div className="min-h-full py-[var(--appbar-height)] bg-[inherit]">
       <div className={`fraunces-regular my-8 w-[98%] md:min-w-[40svw] md:w-[30%] mx-auto px-2 py-8 bg-white shadow-black shadow-xs/15 ${Theme.rounded}`}>
+        <p className="px-2 text-neutral-500">NOTE: this website is in demo mode. For a sample account please try user, user</p>
         <FormHeader title="Login" />
         <form className="text-lg md:text-sm px-8" onSubmit={onSubmit}>
           <FormError errors={errs} />

@@ -6,20 +6,20 @@ const api = import.meta.env.VITE_API;
 
 export default function useAuth() {
   const authLogin = async (data: User) => {
-    const res = await fetch(`${api}/auth/login`, {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: data.toJson()
-    });
-
-    const resjson = await res.json();
-    if (res.status >= 200 && res.status < 300) {
-      return new User(resjson);
-    }
-    throw new MError(resjson);
+    // const res = await fetch(`${api}/auth/login`, {
+    //   method: "POST",
+    //   credentials: "include",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: data.toJson()
+    // });
+    //
+    // const resjson = await res.json();
+    // if (res.status >= 200 && res.status < 300) {
+    //   return new User(resjson);
+    // }
+    // throw new MError(resjson);
   };
 
   const authRegister = async(data: User) => {

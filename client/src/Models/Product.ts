@@ -104,9 +104,9 @@ export class ProductFilterPresets {
   count: number;
 
   constructor(obj: any) {
-    this.maxPrice = obj.maxPrice;
-    this.categories = obj.categories;
-    this.count = obj.count;
+    this.maxPrice = obj?.maxPrice || 9999;
+    this.categories = obj?.categories || [] ;
+    this.count = obj?.count || 10;
   }
 
   static empty() {
