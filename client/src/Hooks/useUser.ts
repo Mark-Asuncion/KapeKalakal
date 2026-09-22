@@ -63,7 +63,7 @@ export default function useUsers() {
   };
 
   const getShippingInfo = async () => {
-    return window.LOGGED_IN_USER?.shipping;
+    return window.LOGGED_IN_USER?.shipping || null;
     // const res = await fetch(`${api}/shipping-info`, {
     //   credentials: "include",
     // });

@@ -23,7 +23,7 @@ export default function useImageMedia() {
   };
 
   const deleteImg = async (link: string) => {
-    throw new MError("Media uploading/deletion is disabled");
+    return {} as any;
     // const res = await fetch(`${url}/delete`, {
     //   method: "DELETE",
     //   credentials: "include",
