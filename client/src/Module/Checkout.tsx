@@ -118,6 +118,7 @@ function OrderForm({ setSucessful: setSuccessful }: { setSucessful: React.Dispat
 
   if (loading) return <Loading />;
   return <form ref={refForm} onInput={onInput} className="col-span-2 [&>*]:mb-4" onSubmit={(e) => e.preventDefault()}>
+    <p className="text-neutral-400">NOTE: the features of this module is disabled</p>
     <h1 className="text-2xl mb-1! flex items-center">
       Order information
       <Button pColor="none"
@@ -160,7 +161,7 @@ function OrderForm({ setSucessful: setSuccessful }: { setSucessful: React.Dispat
         e.stopPropagation();
         setPaymentMethod(e.currentTarget.value);
       }} />
-      <Radio id="paymentMethodOnline" checked={paymentMethod == "paypal"} required label="Pay online with Paypal" name="paymentMethod" value="paypal" onChange={(e) => {
+      <Radio id="paymentMethodOnline" disabled={true} checked={paymentMethod == "paypal"} required label="Pay online with Paypal" name="paymentMethod" value="paypal" onChange={(e) => {
         e.stopPropagation();
         setPaymentMethod(e.currentTarget.value);
       }} />
@@ -191,5 +192,5 @@ function CodButton({ onSuccess }: { onSuccess: () => void }) {
     }
   }, []);
 
-  return <Button loading={loading} className="w-full" onClick={onClick}>Process Order</Button>
+  return <Button loading={loading} className="w-full" onClick={onClick} disabled={true}>Process Order</Button>
 }

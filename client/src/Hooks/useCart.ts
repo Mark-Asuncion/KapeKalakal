@@ -109,7 +109,30 @@ export default function useCart() {
   };
 
   const getBreakdown = async (cart: Cart) => {
-    throw new MError("Breakdown is disabled");
+    const vatRate = 0.12;
+    let itemsAmount = 0;
+    const subtotal = cart.products.reduce((total, item) => {
+        if (item.product == null) return total;
+        const price = item.product.price;
+        const discount = item.product.discount || 0;
+
+        itemsAmount += item.amount;
+        const discountedPrice = price - (price * discount / 100);
+
+        return total + (discountedPrice * item.amount);
+    }, 0);
+
+    const vatAmount = itemsAmount * vatRate;
+    const total = subtotal + vatAmount;
+
+    return new Checkout({
+        subtotal,
+        vatRate,
+        vatAmount,
+        itemsAmount,
+        total
+    });
+
     // const res = await fetch(`${api}/cart/breakdown/${cart.id}`,{
     //   credentials: "include"
     // });

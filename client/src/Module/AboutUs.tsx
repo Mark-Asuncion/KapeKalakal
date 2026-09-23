@@ -14,11 +14,13 @@ export default function AboutUs() {
           <p className="text-sm text-primary-900/80">How it started</p>
           <h1 className="text-4xl mb-4">Founded in 2025 by a group of passionate students and entrepreneurs</h1>
           <p className="text-md text-justify"><span className="text-xl font-semibold">Kape Kalakal</span> was born out of love for local coffee, crafts, and the Filipino spirit of bayanihan. The name, a blend of kape (coffee) and kalakal (trade), reflects our belief that local products deserve a national—and even global—stage.<br /><br />  What started as a school project has grown into a digital platform supporting farmers, artisans, and small businesses from Luzon to Mindanao.</p>
+          <br />
+          <span className="font-semibold">Disclaimer:</span> This website is a personal project created as a conceptual website for Kape Kalakal. It is not an official website and is not affiliated with, operated by, or endorsed by the actual Kape Kalakal store or its owners. This project is intended solely as a portfolio demonstration of my web development skills.
         </div>
         <div className="p-4 flex items-center">
           <img
-            className="rounded-md w-full object-cover"
-            src="https://www.cyanpak.com/uploads/e1.jpg" />
+            className="rounded-md w-full object-cover h-[500px]"
+            src="https://media.istockphoto.com/id/174684628/photo/pouring-fresh-coffee.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=pXOkO9bhWVKA7s4JGtvz9aPMZzkF24noXPdXlMkTQ_A=" />
         </div>
       </div>
 

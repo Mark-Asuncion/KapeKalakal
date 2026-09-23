@@ -188,7 +188,16 @@ export default function useProducts() {
   }
 
   const getFilterPresets = async () => {
-    return new ProductFilterPresets({});
+    const tags = new Set();
+    window.PRODUCTS.forEach((v) => {
+        v.tags.forEach((tag) => {
+            if (tag.toLowerCase() == "best seller") return;
+            tags.add(tag)
+        });
+    });
+    return new ProductFilterPresets({
+        categories: [...tags]
+    });
     // const res = await fetch(`${url}/filter-presets`);
     //
     // const resjson = await res.json() as any[];
